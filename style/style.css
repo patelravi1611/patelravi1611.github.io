@@ -1,0 +1,267 @@
+@font-face {
+    font-family: 'AsemKandis';
+    src: url('../fonts/AsemKandis.eot?#iefix') format('embedded-opentype'),  url('../fonts/AsemKandis.woff') format('woff'), url('../fonts/AsemKandis.ttf')  format('truetype'), url('../fonts/AsemKandis.svg#AsemKandis') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  :root {
+    --color-1: #fff;
+    --color-2: #000;
+    --color-3: #d3d3d3;
+    --color-4: #4e4d4d;
+    --color-5: #232323;
+    --color-6: rgba(211, 211, 211, 0.5);
+    --color-7: #4d4d4d;
+    /* --color-7: #b4b4b4; */
+    /* --grid-width: 140rem; */
+    /* --logo-rotation-duration: 15s; */
+    /* --left-margin: calc((var(--grid-width) / 12) * 1); */
+    /* font-size: 10px; */
+  }
+  
+a {
+    text-decoration: none;
+}
+p,h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+* {
+    font-family: 'Playfair Display', serif;
+    box-sizing: border-box;
+}
+nav,ul {
+    list-style: none;
+}
+body {
+    margin: 0;
+    background-color: var(--color-2);
+    background-image: linear-gradient(90deg,transparent 239px,var(--color-7));
+    background-size: 240px 160px;
+    min-height: 100vh;
+    box-sizing: border-box;
+
+}
+.logo {
+    font-family: 'AsemKandis';
+    color: var(--color-1);
+    font-size: 100px;
+    padding-left: 25px;
+}
+header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+header .menu {
+    display: flex;
+}
+
+header .menu li {
+    margin-left: 32px;
+}
+
+header .menu li a {
+    color: var(--color-1);
+    font-family: 'IBM Plex Mono', monospace;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+}
+.title {
+    color: var(--color-3);
+    font-size: 70px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    line-height: 96px;
+    margin: 0;
+}
+section.personal-info {
+    padding: 0 130px;
+    padding-top: 130px;
+}
+section.personal-info p.sub-title {
+    color: var(--color-3);
+    line-height: 32px;
+    font-size: 16px;
+    padding-top: 80px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+section.personal-info p.sub-title span {
+    color: var(--color-1);
+    font-family: 'IBM Plex Mono', monospace;
+}
+section.personal-info p.sub-title a {
+    color: var(--color-1);
+    font-family: 'IBM Plex Mono', monospace;
+    text-decoration: underline;
+}
+section.my-skills {
+    padding: 350px 130px 90px;
+}
+.my-skills-row .data p {
+    color: var(--color-1);
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.my-skills-row .data {
+    display: flex;
+    justify-content: space-between;
+}
+
+.my-skills-cont {
+    margin-top: 64px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.my-skills-cont .my-skills-row {
+    width: calc(33.33% - 30px);
+    margin-top: 40px;
+}
+.my-skills-cont .my-skills-row:nth-child(1),.my-skills-cont .my-skills-row:nth-child(2),.my-skills-cont .my-skills-row:nth-child(3) {
+    margin-top:0;
+}
+.my-skills-row .my-skills-progress {
+    margin-top: 24px;
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background-color: var(--color-6);
+    border-radius: 10px;
+}
+
+.my-skills-row .my-skills-progress .fill {
+    height: 6px;
+    border-radius: 6px;
+    background-color: var(--color-1);
+}
+section.white-section {
+    padding: 80px 130px;
+    background-color: var(--color-1);
+}
+.white-section .small-title {
+    color: var(--color-5);
+    font-size: 40px;
+    line-height: 50px;
+    margin-bottom: 80px;
+}
+
+.white-section a {
+    color: var(--color-4);
+    font-size: 18px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+section.portfolio {
+    padding: 90px 130px 175px;
+}
+
+section.portfolio p.sub-title {
+    color: var(--color-3);
+    margin-top: 35px;
+    font-size: 18px;
+    line-height: 36px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+}
+.portfolio-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.portfolio-cont a {
+    min-width: calc(33.33%);
+    color: var(--color-3);
+    font-size: 32px;
+    margin-top: 125px;
+    font-weight: 400;
+}
+
+.portfolio-cont a:nth-child(3n-1) {
+    text-align: center;
+}
+.portfolio-cont a:nth-child(3n) {
+    text-align: right;
+}
+
+section.work-exp > div {
+    flex: 1;
+}
+
+section.work-exp {
+    padding: 90px 130px 48px;
+    display: flex;
+}
+.work-exp-row {
+    display: flex;
+    align-items: start;
+    margin-bottom: 32px;
+}
+section.work-exp p.small-title {
+    color: var(--color-1);
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.work-exp-row .work-exp-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-3);
+    border-radius: 6px;
+    margin-right: 12px;
+    margin-top: 8px;
+}
+
+.work-exp-row p.work-exp-title {
+    font-size: 17px;
+    color: var(--color-3);
+    line-height: 22px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.work-exp-row p.work-exp-subtitle {
+    font-size: 13px;
+    color: var(--color-6);
+    line-height: 17px;
+    margin-top: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+footer {
+    padding: 0 130px 48px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+footer .logo {
+    padding: 0;
+    /* padding-right: 40px; */
+}
+footer .my-sign {
+    color: var(--color-1);
+    font-size: 50px;
+    font-family: 'AsemKandis';
+    padding-left: 16px;
+}
+footer .wa-num {
+    color: var(--color-3);
+    font-size: 12px;
+    font-weight: 500;
+    margin: 30px 0;
+    display: block;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+footer .social-cont a {
+    color: var(--color-3);
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 32px;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    font-family: 'IBM Plex Mono', monospace;
+}
