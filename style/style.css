@@ -4,21 +4,47 @@
     font-weight: normal;
     font-style: normal;
   }
-  :root {
+  @media (prefers-color-scheme: light) {
+    
+  }
+  @media (prefers-color-scheme: dark) {
+    
+  }
+  
+  
+  .theme-dark {
     --color-1: #fff;
     --color-2: #000;
     --color-3: #d3d3d3;
     --color-4: #4e4d4d;
     --color-5: #232323;
-    --color-6: rgba(211, 211, 211, 0.25);
-    --color-7: #4d4d4d;
-    /* --color-7: #b4b4b4; */
+    --color-6: rgba(211, 211, 211, 0.5);
     /* --grid-width: 140rem; */
     /* --logo-rotation-duration: 15s; */
     /* --left-margin: calc((var(--grid-width) / 12) * 1); */
     /* font-size: 10px; */
   }
-  
+  .theme-light {
+    --color-1: #000000;
+    --color-2: #F0EFEF;
+    --color-3: #4E4D4D;
+    --color-4: #4e4d4d;
+    --color-5: #232323;
+    --color-6: rgba(78, 77, 77, 0.5);
+    --color-7: #ffffff;
+    /* --grid-width: 140rem; */
+    /* --logo-rotation-duration: 15s; */
+    /* --left-margin: calc((var(--grid-width) / 12) * 1); */
+    /* font-size: 10px; */
+  }
+  body {
+    margin: 0;
+    background-color: var(--color-2);
+    background-image: linear-gradient(90deg,transparent 239px,rgba(211, 211, 211, 0.25));
+    background-size: 240px 160px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
 a {
     text-decoration: none;
 }
@@ -32,14 +58,23 @@ p,h1,h2,h3,h4,h5,h6 {
 nav,ul {
     list-style: none;
 }
-body {
+.theme-light body {
     margin: 0;
     background-color: var(--color-2);
-    background-image: linear-gradient(90deg,transparent 239px,var(--color-6));
+    background-image: linear-gradient(90deg,transparent 239px,rgba(78, 77, 77, 0.25));
     background-size: 240px 160px;
     min-height: 100vh;
     box-sizing: border-box;
 
+}
+.theme-light section.white-section {
+    background-color: var(--color-7);
+}
+.theme-light .title {
+    color: var(--color-1);
+}
+.theme-light .my-skills-row .my-skills-progress .fill {
+    background-color: var(--color-4);
 }
 .logo {
     font-family: 'AsemKandis';
@@ -60,6 +95,7 @@ header .menu {
 
 header .menu li {
     margin-left: 32px;
+    display: flex;
 }
 
 header .menu li a {
@@ -68,6 +104,12 @@ header .menu li a {
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 500;
+}
+.theme-button {
+    display: none;
+}
+.theme-button.enabled {
+    display: block;
 }
 .title {
     color: var(--color-3);
@@ -101,7 +143,7 @@ section.my-skills {
     padding: 350px 130px 90px;
 }
 .my-skills-row .data p {
-    color: var(--color-1);
+    color: var(--color-3);
     font-family: 'IBM Plex Mono', monospace;
 }
 
@@ -205,6 +247,7 @@ section.work-exp p.small-title {
     color: var(--color-1);
     font-size: 18px;
     font-weight: 500;
+    font-family: 'IBM Plex Mono', monospace;
     margin-bottom: 40px;
 }
 
