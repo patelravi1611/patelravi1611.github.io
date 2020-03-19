@@ -35,7 +35,7 @@ nav,ul {
 body {
     margin: 0;
     background-color: var(--color-2);
-    background-image: linear-gradient(90deg,transparent 239px,var(--color-7));
+    background-image: linear-gradient(90deg,transparent 239px,var(--color-6));
     background-size: 240px 160px;
     min-height: 100vh;
     box-sizing: border-box;
