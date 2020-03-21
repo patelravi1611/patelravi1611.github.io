@@ -3,6 +3,7 @@
     src: url('../fonts/AsemKandis.eot?#iefix') format('embedded-opentype'),  url('../fonts/AsemKandis.woff') format('woff'), url('../fonts/AsemKandis.ttf')  format('truetype'), url('../fonts/AsemKandis.svg#AsemKandis') format('svg');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
   }
   @media (prefers-color-scheme: light) {
     
