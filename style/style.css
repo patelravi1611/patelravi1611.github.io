@@ -129,6 +129,7 @@ section.personal-info p.sub-title {
     font-size: 16px;
     padding-top: 80px;
     font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
 }
 section.personal-info p.sub-title span {
     color: var(--color-1);
@@ -412,7 +413,7 @@ footer .social-cont a {
         flex-direction: column;
     }
     section.work-exp .work-exp-cont {
-        margin-bottom: 32px;
+        margin-bottom: 64px;
     }
     section.work-exp p.small-title {
         font-size: 13px;
@@ -431,6 +432,9 @@ footer .social-cont a {
         font-size: 8px;
         line-height: 10px;
         margin-top: 8px;
+    }
+    .work-exp-row:last-child {
+        margin-bottom: 0;
     }
     .edu-cont .work-exp-row p.work-exp-title {
         line-height: 24px;
@@ -451,5 +455,8 @@ footer .social-cont a {
     footer .social-cont a {
         font-size: 12px;
         margin-right: 24px;
+    }
+    .theme-light footer {
+        background-color: var(--color-7);
     }
 }
