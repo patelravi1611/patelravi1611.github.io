@@ -459,4 +459,13 @@ footer .social-cont a {
     .theme-light footer {
         background-color: var(--color-7);
     }
+    .theme-dark footer {
+        background-color: #F0EFEF;
+    }
+    .theme-dark footer .my-sign {
+        color: var(--color-2);
+    }
+    .theme-dark footer .wa-num ,.theme-dark footer .social-cont a{
+        color: var(--color-4);
+    }
 }
