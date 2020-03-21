@@ -443,14 +443,14 @@ footer .social-cont a {
         margin-top: 8px;
     }
     footer {
-        padding: 64px 16px;
+        padding: 32px 16px;
     }
     footer .logo {
         display: none;
     }
     footer .wa-num {
         font-size: 12px;
-        margin: 36px 0 20px;
+        margin: 24px 0 16px;
     }
     footer .social-cont a {
         font-size: 12px;
