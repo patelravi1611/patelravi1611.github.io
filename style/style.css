@@ -44,7 +44,7 @@
 .bg-lines div {
     width: 1px;
     height: 100%;
-    background-color: rgba(77, 77, 77, 0.25);
+    background-color: rgba(77, 77, 77, 0.35);
 }
 a {
     text-decoration: none;
@@ -68,7 +68,7 @@ nav,ul {
     box-sizing: border-box;
 }
 .theme-light .bg-lines div {
-    background-color: rgba(77, 77, 77, 0.1);
+    background-color: rgba(77, 77, 77, 0.05);
 }
 .theme-light section.white-section {
     background-color: var(--color-7);
