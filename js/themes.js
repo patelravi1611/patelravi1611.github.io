@@ -84,7 +84,13 @@ function enableTheme(newTheme = 'light', withTransition = false, save = true){
   (root.classList.contains('theme-dark')) ? currentTheme = 'dark' : 'light'
 
   if (withTransition === true && newTheme !== currentTheme) animateThemeTransition()
+  if(newTheme == 'light') {
+    document.querySelector('.theme-popup-title span').innerHTML = 'Dark';
+  }
+  else {
+    document.querySelector('.theme-popup-title span').innerHTML = 'Light';
 
+  }
   root.classList.add('theme-' + newTheme)
   root.classList.remove('theme-' + otherTheme)
 
@@ -131,3 +137,9 @@ function supportedAnimationEvent(){
     if (el.style[t] !== undefined) return animations[t]   // Return the name of the event fired by the browser to indicate a CSS animation has ended
   }
 }
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  setTimeout(function(){ 
+    document.querySelector('.theme-popup').classList.remove('show-theme-popup');
+   }, 3000);
+});

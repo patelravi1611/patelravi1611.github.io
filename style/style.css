@@ -40,7 +40,73 @@
     justify-content: space-between;
     z-index: -1;
 }
-
+.theme-dark .theme-popup {
+    position: absolute;
+    background-color: rgba(60, 60, 60, 0.24);
+    right: -10px;
+    padding: 16px;
+    top: 40px;
+    display: none;
+}
+.theme-dark .theme-popup:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid rgba(60, 60, 60, 0.24);
+    top: -10px;
+    right: 10px;
+}
+.theme-dark .theme-popup p {
+    font-size: 12px;
+    color: #909090;
+    font-family: 'IBM Plex Mono', monospace;
+}
+.theme-dark .theme-popup p.theme-popup-title {
+    color: #fff;
+    font-size: 20px;
+    /* font-weight: 500; */
+    white-space: nowrap;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 2px;
+}
+.theme-icon:hover .theme-popup,.theme-dark .theme-popup.show-theme-popup,.theme-light .theme-popup.show-theme-popup {
+    display: block;
+}
+.theme-light .theme-popup {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.1);
+    right: -10px;
+    padding: 16px;
+    top: 40px;
+    display: none;
+}
+.theme-light .theme-popup:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid rgba(0, 0, 0, 0.1);
+    top: -10px;
+    right: 10px;
+}
+.theme-light .theme-popup p {
+    font-size: 12px;
+    color: #909090;
+    font-family: 'IBM Plex Mono', monospace;
+}
+.theme-light .theme-popup p.theme-popup-title {
+    color: #4E4D4D;
+    font-size: 20px;
+    font-weight: 500;
+    white-space: nowrap;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 2px;
+}
 .bg-lines div {
     width: 1px;
     height: 100%;
@@ -99,6 +165,7 @@ header .menu {
 header .menu li {
     margin-left: 32px;
     display: flex;
+    position: relative;
 }
 
 header .menu li a {
@@ -316,6 +383,20 @@ footer .social-cont a {
 }
 
 @media screen and (max-width:767px) {
+    .theme-dark .theme-popup,.theme-light .theme-popup {
+        right: -10px;
+        padding: 12px;
+        top: 40px;
+    }
+    .theme-icon:hover .theme-popup {
+        display: none;
+    }
+    .theme-dark .theme-popup p, .theme-light .theme-popup p {
+        font-size: 8px;
+    }
+    .theme-dark .theme-popup p.theme-popup-title,.theme-light .theme-popup p.theme-popup-title {
+        font-size: 12px;
+    }
     .bg-lines {
         padding: 0 16px;
     }
