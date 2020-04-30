@@ -24,13 +24,15 @@
     --color-6: rgba(78, 77, 77, 0.5);
     --color-7: #ffffff;
   }
-  body {
+body {
     margin: 0;
     background-color: var(--color-2);
-    /* background-image: linear-gradient(90deg,transparent 239px,rgba(211, 211, 211, 0.25));
-    background-size: 240px 160px;
-    min-height: 100vh; */
     box-sizing: border-box;
+    /* filter: blur(40px); */
+    transition: all  0.4s cubic-bezier(0, 0, 0.38, 0.9);
+}
+body.show {
+    filter: blur(0px);
 }
 .bg-lines {
     width: 100%;
@@ -193,6 +195,15 @@ section.personal-info {
     padding: 0 130px;
     padding-top: 130px;
 }
+section.personal-info .title {
+    transform: translateX(-60px);
+    opacity: 0;
+    transition: all  1s cubic-bezier(0, 0, 0.38, 0.9);
+}
+section.personal-info .title.show-title,section.personal-info .sub-title.show-sub-title {
+    transform: initial;
+    opacity: 1;
+}
 section.personal-info p.sub-title {
     color: var(--color-3);
     line-height: 32px;
@@ -200,6 +211,10 @@ section.personal-info p.sub-title {
     padding-top: 80px;
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 500;
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: all  1s cubic-bezier(0, 0, 0.38, 0.9);
+    transition-delay: .2s;
 }
 section.personal-info p.sub-title span {
     color: var(--color-1);
@@ -211,8 +226,15 @@ section.personal-info p.sub-title a {
     text-decoration: underline;
 }
 section.my-skills {
-    padding: 350px 130px 90px;
+    padding: 300px 130px 90px;
 }
+section.my-skills .title {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all  0.4s cubic-bezier(0, 0, 0.38, 0.9);
+}
+
+section.my-skills.show-my-skills .title {transform: initial;opacity: 1;}
 .my-skills-row .data p {
     color: var(--color-3);
     font-family: 'IBM Plex Mono', monospace;
@@ -236,6 +258,39 @@ section.my-skills {
 .my-skills-cont .my-skills-row:nth-child(1),.my-skills-cont .my-skills-row:nth-child(2),.my-skills-cont .my-skills-row:nth-child(3) {
     margin-top:0;
 }
+.my-skills-row {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all  0.4s cubic-bezier(0, 0, 0.38, 0.9);
+    /* transition-delay: .2s; */
+}
+/* .my-skills-row:nth-child(2) {
+    transition-delay: .2s;
+}
+.my-skills-row:nth-child(3) {
+    transition-delay: .4s;
+}
+.my-skills-row:nth-child(4) {
+    transition-delay: .8s;
+}
+.my-skills-row:nth-child(5) {
+    transition-delay: 1s;
+}
+.my-skills-row:nth-child(6) {
+    transition-delay: 1.2s;
+}
+.my-skills-row:nth-child(7) {
+    transition-delay: 1.4s;
+}
+.my-skills-row:nth-child(8) {
+    transition-delay: 1.6s;
+}
+.my-skills-row:nth-child(9) {
+    transition-delay: 1.8s;
+} */
+.my-skills-row.show-my-skills-row {
+    transform: initial;opacity: 1;
+}
 .my-skills-row .my-skills-progress {
     margin-top: 24px;
     position: relative;
@@ -249,16 +304,30 @@ section.my-skills {
     height: 6px;
     border-radius: 6px;
     background-color: var(--color-1);
+    width: 0;
 }
+.my-skills-row.show-my-skills-row .my-skills-progress .fill {
+    transition: width  0.4s cubic-bezier(0, 0, 0.38, 0.9);
+}
+
 section.white-section {
     padding: 80px 130px;
     background-color: var(--color-1);
 }
 .white-section .small-title {
-    color: var(--color-5);
+    /* color: var(--color-5); */
+    color: transparent;
     font-size: 40px;
     line-height: 50px;
     margin-bottom: 80px;
+    text-shadow: var(--color-5) 0.1rem 0 1rem;
+    -webkit-transition: text-shadow .98s ease .5s;
+    transition: text-shadow .98s ease .5s;
+}
+.white-section .show-small-title {
+    text-shadow: var(--color-5) 0.1rem 0 0;
+    -webkit-transition: text-shadow .98s ease .5s;
+    transition: text-shadow .98s ease .5s;
 }
 
 .white-section a {
