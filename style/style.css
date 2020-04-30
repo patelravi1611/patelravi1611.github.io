@@ -28,7 +28,7 @@ body {
     margin: 0;
     background-color: var(--color-2);
     box-sizing: border-box;
-    /* filter: blur(40px); */
+    filter: blur(40px);
     transition: all  0.4s cubic-bezier(0, 0, 0.38, 0.9);
 }
 body.show {
@@ -227,6 +227,8 @@ section.personal-info p.sub-title a {
 }
 section.my-skills {
     padding: 300px 130px 90px;
+    padding-top: 0;
+    margin-top: 300px;
 }
 section.my-skills .title {
     transform: translateY(50px);
@@ -304,10 +306,12 @@ section.my-skills.show-my-skills .title {transform: initial;opacity: 1;}
     height: 6px;
     border-radius: 6px;
     background-color: var(--color-1);
-    width: 0;
+    transform: scaleX(0);
+    transition: transform 2s cubic-bezier(0, 0, 0.38, 0.9);
+    transform-origin: left;
 }
 .my-skills-row.show-my-skills-row .my-skills-progress .fill {
-    transition: width  0.4s cubic-bezier(0, 0, 0.38, 0.9);
+    transform: scaleX(1);
 }
 
 section.white-section {
@@ -510,6 +514,8 @@ footer .social-cont a {
     }
     section.my-skills {
         padding: 110px 16px 64px;
+        padding-top: 0;
+        margin-top: 110px;
     }
     .my-skills-cont {
         margin-top: 48px;
