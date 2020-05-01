@@ -11,6 +11,8 @@ class homePage {
     }
     allAnimateElement() {
         this.elementFromTop(document.querySelectorAll('.my-skills'),'show-my-skills',90, 'percent'); // as top of element enters bottom of viewport 
+        this.elementFromTop(document.querySelectorAll('.portfolio'),'show-portfolio',70, 'percent'); // as top of element enters bottom of viewport 
+        this.elementFromTop(document.querySelectorAll('.portfolio-cont a'),'show-portfolio-icon',90, 'percent'); // as top of element enters bottom of viewport 
         this.elementFromTop(document.querySelectorAll('.my-skills-row'),'show-my-skills-row',95, 'percent'); // as top of element enters bottom of viewport 
         this.elementFromTop(document.querySelectorAll('.white-section .small-title'),'show-small-title',95, 'percent'); // as top of element enters bottom of viewport 
     }

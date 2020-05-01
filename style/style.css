@@ -230,13 +230,16 @@ section.my-skills {
     padding-top: 0;
     margin-top: 300px;
 }
-section.my-skills .title {
+section.my-skills .title,section.portfolio .title {
     transform: translateY(50px);
     opacity: 0;
     transition: all  0.4s cubic-bezier(0, 0, 0.38, 0.9);
 }
 
-section.my-skills.show-my-skills .title {transform: initial;opacity: 1;}
+section.my-skills.show-my-skills .title,section.portfolio.show-portfolio .title {
+    transform: initial;
+    opacity: 1;
+}
 .my-skills-row .data p {
     color: var(--color-3);
     font-family: 'IBM Plex Mono', monospace;
@@ -324,14 +327,14 @@ section.white-section {
     font-size: 40px;
     line-height: 50px;
     margin-bottom: 80px;
-    text-shadow: var(--color-5) 0.1rem 0 1rem;
-    -webkit-transition: text-shadow .98s ease .5s;
-    transition: text-shadow .98s ease .5s;
+    text-shadow: var(--color-5) 0.1rem 0 0.6rem;
+    -webkit-transition: text-shadow .2s ease .5s;
+    transition: text-shadow .2s ease .5s;
 }
 .white-section .show-small-title {
     text-shadow: var(--color-5) 0.1rem 0 0;
-    -webkit-transition: text-shadow .98s ease .5s;
-    transition: text-shadow .98s ease .5s;
+    -webkit-transition: text-shadow .2s ease .5s;
+    transition: text-shadow .2s ease .5s;
 }
 
 .white-section a {
@@ -350,6 +353,15 @@ section.portfolio p.sub-title {
     line-height: 36px;
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 500;
+    opacity: 0;
+    transform: translateY(50px);
+    -webkit-transition: all  0.4s cubic-bezier(0, 0, 0.38, 0.9);
+    transition: all  0.4s cubic-bezier(0, 0, 0.38, 0.9);
+    transition-delay: .4s;
+}
+section.portfolio.show-portfolio p.sub-title {
+    opacity: 1;
+    transform: initial;
 }
 .portfolio-cont {
     display: flex;
@@ -365,8 +377,16 @@ section.portfolio p.sub-title {
     font-size: 32px;
     margin-top: 125px;
     font-weight: 400;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all  0.4s cubic-bezier(0, 0, 0.38, 0.9);
+    transition-delay: .2s;
 }
 
+ .portfolio-cont a.show-portfolio-icon {
+    transform: initial;
+    opacity: 1;
+}
 .portfolio-cont a:nth-child(3n-1) {
     text-align: center;
 }
